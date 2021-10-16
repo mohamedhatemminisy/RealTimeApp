@@ -18,7 +18,7 @@ class CreateReplaysTable extends Migration
             $table->text('body');
             $table->integer('question_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->forign('question_id')->references('id')->on('questions')
+            $table->foreign('question_id')->references('id')->on('questions')
             ->onDelete('cascade');
             $table->timestamps();
         });
